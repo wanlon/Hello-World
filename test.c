@@ -7,6 +7,9 @@
 int main()
 {
     int sort_cnt,sum;
+    char *p_str = NULL;
+
+    p_str = malloc(100);
     
     sort_cnt = 0;
     scanf("%d",&sort_cnt);
@@ -17,5 +20,9 @@ int main()
     }
     
     sum *= sort_cnt;
-    printf("%d\n",sum);    
+    *p_str = sum;
+    printf("%d\n",sum);
+    printf("%s",p_str);
+
+    free(p_str);
 }
